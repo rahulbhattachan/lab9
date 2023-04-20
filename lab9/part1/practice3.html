@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head></head>
+   <body>
+       <h1>Practice Three</h1>
+       Password 1:
+       <input type = "text" id = "password1" value>
+       <p></p>
+       Password 2:
+       <input type = "text" id = "password2" value>
+       <p></p>
+       <button onclick = "Validate()">Validate</button>
+
+
+       <script>
+           function Validate() {
+           var password1 = document.getElementById("password1").value;
+           var password2 = document.getElementById("password2").value;
+
+
+           if (password1.length < 8) {
+               alert("Password must be at least 8 characters long!");
+           } else if (password1 !== password2) {
+               alert("Passwords do not match!");
+           } else {
+               alert("Passwords matched!");
+           }
+           }
+       </script>
+      
+   </body>
+</html>
+

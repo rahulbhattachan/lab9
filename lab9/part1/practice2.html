@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Paragraph Styling</title>
+   <h1>Practice Two</h1>
+   <p></p>
+   <style>
+       #paragraph {
+           background-color: white;
+           border: 6px solid black;
+       }
+   </style>
+</head>
+
+
+<body>
+   <div id="paragraph">
+       <p>Dummy Text.</p>
+   </div>
+   <div>
+       <p></p>
+       <label for="Border">Border Size:</label>
+       <input type="text" id="Border" name="Border">
+       <p></p>
+
+
+       <label for="BRR">Border Red (0-255):</label>
+       <input type="text" id="BRR" name="BRR">
+       <p></p>
+       <label for="BRG">Border Green (0-255):</label>
+       <input type="text" id="BRG" name="BRG">
+       <p></p>
+       <label for="BRB">Border Blue (0-255):</label>
+       <input type="text" id="BRB" name="BRB">
+       <p></p>
+      
+       <label for="BGR">Background Red (0-255):</label>
+       <input type="text" id="BGR" name="BGR">
+       <p></p>
+       <label for="BGG">Background Green (0-255):</label>
+       <input type="text" id="BGG" name="BGG">
+       <p></p>
+       <label for="BGB">Background Blue (0-255):</label>
+       <input type="text" id="BGB" name="BGB">
+       <p></p>
+
+
+       <button onclick="Update()">Change style</button>
+
+
+   </div>
+   <script>
+       function Update() {
+           var Size = document.getElementById("Border").value;
+           var R = document.getElementById("BRR").value;
+           var G = document.getElementById("BRG").value;
+           var B = document.getElementById("BRB").value;
+           var R2 = document.getElementById("BGR").value;
+           var G2 = document.getElementById("BGG").value;
+           var B2 = document.getElementById("BGB").value;
+
+
+           var paragraph = document.getElementById("paragraph");
+           paragraph.style.borderWidth = Size + "px";
+           var color1 = "rgb(" + R + "," + G + "," + B + ")";
+           paragraph.style.borderColor = color1;
+           var color2 = "rgb(" + R2 + "," + G2 + "," + B2 + ")";
+           paragraph.style.backgroundColor = color2;
+       }
+   </script>
+</body>
+</html>
+
